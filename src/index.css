@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #002452;
+  --color-primary-container: #1a3a6c;
+  --color-on-primary-container: #89a5de;
+  --color-surface: #f7f9fe;
+  --color-surface-container-low: #f1f4f9;
+  --color-on-surface: #181c20;
+  --color-on-surface-variant: #43474f;
+  --color-error: #ba1a1a;
+  --color-outline: #747780;
+  --color-outline-variant: #c4c6d0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
+
+html, body {
+  @apply bg-surface text-on-surface font-body antialiased;
+}
+
+.glass-panel {
+  @apply backdrop-blur-2xl bg-white/70 border border-white/50 shadow-xl;
+}
+
+.map-container {
+  background-image: radial-gradient(circle at 50% 50%, #f1f4f9 0%, #f7f9fe 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
